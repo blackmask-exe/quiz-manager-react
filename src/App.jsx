@@ -18,14 +18,7 @@ function App() {
         <Landing onChangeDisplay={setCurrentDisplay} />
       ) : null}
 
-      {currentDisplay === "quiz" ? (
-        <TestView
-          question={selectedQuestion.question}
-          options={selectedQuestion.options}
-          currentQuestion={1}
-          totalQuestions={10}
-        />
-      ) : null}
+      {currentDisplay === "quiz" ? <TestView /> : null}
     </>
   );
 }
