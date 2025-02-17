@@ -20,10 +20,8 @@ const TestView = ({}) => {
   // the following value will return a true or a false based on if the quiz is in progress or not
   const [quizInProgress, setQuizInProgress] = useState(true);
 
-  // extracting data from the question object for convenience
-
-  const handleCorrectSelection = function () {
-    // condition for moving to the next question only if there are questions remaining:
+  // keeping the 'move to next question' code dry
+  const moveToNextQuestion = function () {
     if (currentQuestion.questionIndex < questions.length - 1) {
       setCurrentQuestion((oldQuestionObject) => {
         return questions[oldQuestionObject.questionIndex + 1];
@@ -32,6 +30,10 @@ const TestView = ({}) => {
       // to do something when the user finishes the entire quizz thing
       setQuizInProgress(false);
     }
+  };
+
+  const handleCorrectSelection = function () {
+    moveToNextQuestion();
   };
 
   const handleWrongSelection = function (wrongChoiceIndex) {
@@ -44,14 +46,7 @@ const TestView = ({}) => {
       return oldAnswerArray;
     });
 
-    if (currentQuestion.questionIndex < questions.length - 1) {
-      setCurrentQuestion((oldQuestionObject) => {
-        return questions[oldQuestionObject.questionIndex + 1];
-      });
-    } else {
-      // to do something when the user finishes the entire quizz thing
-      setQuizInProgress(false);
-    }
+    moveToNextQuestion();
   };
   return (
     <>
@@ -63,6 +58,7 @@ const TestView = ({}) => {
           setCurrentQuestion={setCurrentQuestion}
           handleCorrectSelection={handleCorrectSelection}
           handleWrongSelection={handleWrongSelection}
+          setQuizInProgress={setQuizInProgress}
         />
       ) : (
         // the results page will be displayed if the quiz is not in progress (quiz ended)

@@ -1,16 +1,22 @@
+import TestTimer from "./TestTimer";
 import { questions } from "../../questionBank";
 
 export default function TestQuestionsView({
   currentQuestion,
   handleCorrectSelection,
   handleWrongSelection,
+  setQuizInProgress,
 }) {
   const question = currentQuestion.question;
   const options = currentQuestion.options;
+
   return (
     <>
       {" "}
       <div className="flex flex-col items-center mt-24 px-4 w-full max-w-[85rem] mx-auto">
+        {/* Header Row with Timer */}
+        <TestTimer setQuizInProgress={setQuizInProgress} />
+
         {/* Question Section */}
         <div className="text-center mb-8 w-full">
           <h2 className="text-3xl font-bold text-white mb-6">{question}</h2>
