@@ -1,7 +1,5 @@
 import "../App.css";
 
-// Question Imports:
-import { questions } from "../questionBank";
 // SVG Imports:
 import { editLogo } from "../../public/editLogo";
 import { quizLogo } from "../../public/quizLogo";
