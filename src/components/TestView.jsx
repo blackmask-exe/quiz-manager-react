@@ -12,6 +12,7 @@ const TestView = ({}) => {
   // we replace those answers the user did not get right
   const [userAnswers, setUserAnswers] = useState(
     questions.map(() => ({
+      didUserAnswer: false,
       userAnswer: true,
       userSelectedAnswerIndex: 0,
     }))
@@ -21,6 +22,14 @@ const TestView = ({}) => {
   const [quizInProgress, setQuizInProgress] = useState(true);
 
   // keeping the 'move to next question' code dry
+
+  const markUserAnswered = function () {
+    // making it so that if we move to a next question, we the didUserAnswer property to be true
+    setUserAnswers((oldAnswers) => {
+      oldAnswers[currentQuestion.questionIndex].didUserAnswer = true;
+      return oldAnswers;
+    });
+  };
   const moveToNextQuestion = function () {
     if (currentQuestion.questionIndex < questions.length - 1) {
       setCurrentQuestion((oldQuestionObject) => {
@@ -33,10 +42,12 @@ const TestView = ({}) => {
   };
 
   const handleCorrectSelection = function () {
+    markUserAnswered();
     moveToNextQuestion();
   };
 
   const handleWrongSelection = function (wrongChoiceIndex) {
+    markUserAnswered();
     setUserAnswers((oldAnswerArray) => {
       // replacing the nth answer in the array to false because the user pressed
       // a wrong answer

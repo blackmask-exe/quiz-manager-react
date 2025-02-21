@@ -1,6 +1,4 @@
 export const questions = [
-  // assuming that answer is answered correctly by the user, so that
-  // it can be set to wrong if the user does eventually chose a wrong one
   {
     questionIndex: 0,
     question: "What is the capital of France?",
@@ -10,6 +8,7 @@ export const questions = [
     options: ["Paris", "London", "Rome", "Berlin"],
     correctIndex: 0,
     answeredCorrectly: true,
+    questionAnswered: false,
   },
   {
     questionIndex: 1,
@@ -20,6 +19,7 @@ export const questions = [
     options: ["Five", "Six", "Seven", "Eight"],
     correctIndex: 2,
     answeredCorrectly: true,
+    questionAnswered: false,
   },
   {
     questionIndex: 2,
@@ -30,17 +30,19 @@ export const questions = [
     options: ["J.K. Rowling", "Mark Twain", "Harper Lee", "Ernest Hemingway"],
     correctIndex: 2,
     answeredCorrectly: true,
+    questionAnswered: false,
   },
-  {
-    questionIndex: 3,
-    question: "What is the boiling point of water in Celsius?",
-    answer: "100°C",
-    difficulty: 2,
-    timeToAnswer: 2 * 2 * 1000,
-    options: ["90°C", "100°C", "110°C", "120°C"],
-    correctIndex: 1,
-    answeredCorrectly: true,
-  },
+  // {
+  //   questionIndex: 3,
+  //   question: "What is the boiling point of water in Celsius?",
+  //   answer: "100°C",
+  //   difficulty: 2,
+  //   timeToAnswer: 2 * 2 * 1000,
+  //   options: ["90°C", "100°C", "110°C", "120°C"],
+  //   correctIndex: 1,
+  //   answeredCorrectly: true,
+  //   questionAnswered: false,
+  // },
   // {
   //   questionIndex: 4,
   //   question: "Which planet is known as the Red Planet?",
@@ -50,6 +52,7 @@ export const questions = [
   //   options: ["Venus", "Mars", "Jupiter", "Saturn"],
   //   correctIndex: 1,
   //   answeredCorrectly: true,
+  //   questionAnswered: false,
   // },
   // {
   //   questionIndex: 5,
@@ -60,6 +63,7 @@ export const questions = [
   //   options: ["10", "11", "12", "13"],
   //   correctIndex: 2,
   //   answeredCorrectly: true,
+  //   questionAnswered: false,
   // },
   // {
   //   questionIndex: 6,
@@ -75,6 +79,7 @@ export const questions = [
   //   ],
   //   correctIndex: 2,
   //   answeredCorrectly: true,
+  //   questionAnswered: false,
   // },
   // {
   //   questionIndex: 7,
@@ -85,6 +90,7 @@ export const questions = [
   //   options: ["Ag", "Au", "Pb", "Fe"],
   //   correctIndex: 1,
   //   answeredCorrectly: true,
+  //   questionAnswered: false,
   // },
   // {
   //   questionIndex: 8,
@@ -95,6 +101,7 @@ export const questions = [
   //   options: ["1905", "1912", "1923", "1931"],
   //   correctIndex: 1,
   //   answeredCorrectly: true,
+  //   questionAnswered: false,
   // },
   // {
   //   questionIndex: 9,
@@ -105,6 +112,7 @@ export const questions = [
   //   options: ["Oxygen", "Helium", "Hydrogen", "Carbon"],
   //   correctIndex: 2,
   //   answeredCorrectly: true,
+  //   questionAnswered: false,
   // },
 ];
 
