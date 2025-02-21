@@ -16,7 +16,7 @@ function Landing({ onChangeDisplay }) {
     <>
       <Header />
       <HeroHeading />
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 p-8 max-w-7xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-8 max-w-7xl mx-auto pl-24 pr-24">
         <Card
           image={quizLogo}
           heading="Quiz Mode"
