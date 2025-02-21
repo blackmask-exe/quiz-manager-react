@@ -47,7 +47,7 @@ To set up and run the Password Manager locally, follow these steps:
    npm start
    ```
 
-5. **Open https://localhost:(port) on your preferred**
+5. **Open https://localhost:(port) on your preferred browser**
 
 ## Contributing:
 
