@@ -7,13 +7,16 @@ import { reviewLogo } from "../../public/reviewLogo";
 
 // Component Imports:
 import Card from "./subcomponents/Card";
+import HeroHeading from "./subcomponents/HeroHeading";
+
 import Header from "./subcomponents/Header";
 
 function Landing({ onChangeDisplay }) {
   return (
     <>
       <Header />
-      <div className="grid grid-cols-3 gap-6 p-8 mt-8 max-w-7xl mx-auto">
+      <HeroHeading />
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 p-8 max-w-7xl mx-auto">
         <Card
           image={quizLogo}
           heading="Quiz Mode"

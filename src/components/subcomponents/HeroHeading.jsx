@@ -34,7 +34,7 @@ const HeroHeading = () => {
     };
   }, []);
   return (
-    <div className="text-center mt-8 mb-32 ubuntu-mono-regular mt-24">
+    <div className="text-center mt-16 mb-16 ubuntu-mono-regular">
       <h1 className="text-5xl font-bold text-white mb-4 ">
         Online Quiz Manager
       </h1>
