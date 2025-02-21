@@ -2,7 +2,7 @@ const Card = ({ image, heading, description, ...props }) => {
   return (
     <div
       {...props}
-      className=" mx-auto mb-6 w-11/12 sm:w-80 md:w-72 lg:w-72 rounded-lg overflow-hidden border border-gray-800 bg-[#000000] shadow-lg shadow-gray-800/20 cursor-pointer hover:scale-105 duration-300"
+      className="mb-6 w-full md:w-80 lg:w-72 rounded-lg overflow-hidden border border-gray-800 bg-[#000000] shadow-lg shadow-gray-800/20 cursor-pointer hover:scale-105 duration-300"
     >
       <div className="w-full h-64 flex items-center justify-center p-6">
         {image}

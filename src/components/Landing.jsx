@@ -16,25 +16,27 @@ function Landing({ onChangeDisplay }) {
     <>
       <Header />
       <HeroHeading />
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-8 max-w-7xl mx-auto pl-24 pr-24">
-        <Card
-          image={quizLogo}
-          heading="Quiz Mode"
-          description={"Simulate a test"}
-          onClick={() => {
-            onChangeDisplay("quiz");
-          }}
-        />
-        <Card
-          image={reviewLogo}
-          heading="Review Mode"
-          description={"Stress-Free revision"}
-        />
-        <Card
-          image={editLogo}
-          heading="Edit Mode"
-          description={"Add or Remove from the Database"}
-        />
+      <div className="">
+        <div className="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-6 p-8 max-w-7xl mx-auto px-4 md:px-24">
+          <Card
+            image={quizLogo}
+            heading="Quiz Mode"
+            description={"Simulate a test"}
+            onClick={() => {
+              onChangeDisplay("quiz");
+            }}
+          />
+          <Card
+            image={reviewLogo}
+            heading="Review Mode"
+            description={"Stress-Free revision"}
+          />
+          <Card
+            image={editLogo}
+            heading="Edit Mode"
+            description={"Add or Remove from the Database"}
+          />
+        </div>
       </div>
     </>
   );

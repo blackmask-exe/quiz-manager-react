@@ -13,7 +13,7 @@ export default function TestQuestionsView({
   return (
     <>
       {" "}
-      <div className="flex flex-col items-center mt-24 px-4 w-full max-w-[85rem] mx-auto">
+      <div className="flex flex-col items-center mt-24 px-4 w-full md:w-1/2 max-w-[85rem] mx-auto">
         {/* Header Row with Timer */}
         <TestTimer setQuizInProgress={setQuizInProgress} />
 
